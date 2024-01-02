@@ -1,5 +1,3 @@
-/* using arrow function */
-
 export default function getNeighborhoodsList() {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
