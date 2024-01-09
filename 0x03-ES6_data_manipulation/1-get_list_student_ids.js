@@ -2,11 +2,9 @@ export default function getListStudentIds(array) {
   if (!Array.isArray(array)) {
     return [];
   }
-  const new_array = [];
-  let i = 0;
-  for(const x of array) {
-    new_array[i] = x.id; 
-    i += 1;
+  function map_(x) {
+    return x.id;
   }
+  const new_array = array.map(map_);
   return new_array;
 }
