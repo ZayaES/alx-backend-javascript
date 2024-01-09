@@ -1,19 +1,19 @@
 export default function updateStudentGradeByCity(students, city, newGrades) {
-  const new_list = students.filter((x) => x.location === city);
-  const update = new_list.map((x) => {
+  const newList = students.filter((x) => x.location === city);
+  const update = newList.map((x) => {
     let i = 0;
+    const y = x;
     while (i < newGrades.length) {
-      if (x.id === newGrades[i].studentId) {
+      if (y.id === newGrades[i].studentId) {
         if (newGrades[i].grade !== undefined) {
-          x.grade = newGrades[i].grade;
+          y.grade = newGrades[i].grade;
         }
       } else {
-        console.log('else');
-        x.grade = 'N/A';
+        y.grade = 'N/A';
       }
       i += 1;
     }
-    return x;
+    return y;
   });
   return update;
 }
