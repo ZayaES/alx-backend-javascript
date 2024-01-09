@@ -5,13 +5,12 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
     while (i < newGrades.length) {
       if (x.id === newGrades[i].studentId) {
         if (newGrades[i].grade !== undefined) {
-          x['grade'] = newGrades[i].grade;
-	} 
+          x.grade = newGrades[i].grade;
+        }
+      } else {
+        console.log('else');
+        x.grade = 'N/A';
       }
-      else {
-        console.log('else')
-	x['grade'] = 'N/A';
-	}
       i += 1;
     }
     return x;
