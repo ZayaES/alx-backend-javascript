@@ -5,6 +5,6 @@ export default function getListStudentIds(array) {
   function map_(x) {
     return x.id;
   }
-  const new_array = array.map(map_);
-  return new_array;
+  const newArray = array.map(map_);
+  return newArray;
 }
